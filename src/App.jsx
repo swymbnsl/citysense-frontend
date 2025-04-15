@@ -313,8 +313,8 @@ function HeatmapVisualization() {
 
       {/* Main content */}
       <main className="flex-grow flex flex-col md:flex-row overflow-hidden">
-        {/* Sidebar */}
-        <div className="bg-white shadow-md p-4 md:w-64 z-10 overflow-y-auto">
+        {/* Sidebar - visible on all screens but collapsible on mobile */}
+        <div className="bg-white shadow-md p-4 md:w-64 z-10 overflow-y-auto max-h-[40vh] md:max-h-none">
           <h2 className="font-bold text-lg mb-4 text-gray-800">
             Environmental Layers
           </h2>
@@ -437,8 +437,8 @@ function HeatmapVisualization() {
           </div>
         </div>
 
-        {/* Map Container */}
-        <div className="flex-grow relative">
+        {/* Map Container - with adjusted height on mobile */}
+        <div className="flex-grow relative h-[60vh] md:h-auto">
           <div ref={mapContainer} className="absolute inset-0" />
 
           {/* Info overlay (only visible when map is loading) */}
